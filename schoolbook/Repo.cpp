@@ -70,12 +70,15 @@ void Repo::printInvalidIDs() {
     if (!any) cout << "NONE" << std::endl;
 }
 
-void Repo::printAveragePrices() {
+void Repo::printAveragePrices(string bID) {
     for (int i = 0; i <= Repo::lastIndex; i++) {
-        cout << bookRepoArray[i]->getID() << ": ";
-        cout << (bookRepoArray[i]->getPrices()[0]
-            + bookRepoArray[i]->getPrices()[1]
-            + bookRepoArray[i]->getPrices()[2]) / 3.0 << std::endl;
+        if (bookRepoArray[i]->getID() == bID) {
+            cout << bID << ": ";
+            cout << (bookRepoArray[i] -> getPrices()[0]
+                + bookRepoArray[i]->getPrices()[1]
+                + bookRepoArray[i]->getPrices()[2]) / 3.0 << std::endl;
+        }
+        
     }
 }
 

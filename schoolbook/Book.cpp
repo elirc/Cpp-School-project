@@ -33,7 +33,7 @@ void Book::setAuthor(string author) { this->author = author; }
 void Book::setPrices(double prices[]) {
     for (int i = 0; i < priceArraySize; i++) this->prices[i] = prices[i];
 }
-void Book::setBookTypes(BookType bt) { this->bookType = bookType; }
+void Book::setBookTypes(BookType bookType) { this->bookType = bookType; }
 
 //print using the print header
 void Book::printHeader() {

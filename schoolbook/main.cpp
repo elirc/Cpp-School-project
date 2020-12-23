@@ -27,7 +27,9 @@ int main() {
 	cout << std::endl;
 
 	cout << "Displaying average prices: " << std::endl;
-	repo.printAveragePrices();
+	for (int i = 0; i < numBooks; i++) {
+		repo.printAveragePrices(repo.bookRepoArray[i]->getID());
+	}
 	cout << std::endl;
 
 	cout << "Removing book with ID N_W1:" << std::endl;

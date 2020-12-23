@@ -2,12 +2,10 @@
 #include "Book.h"
 
 class Repo {
-private:
+public:
     int lastIndex = -1;
     const static int numBooks = 5;
     Book* bookRepoArray[numBooks]; // not declared dynamicly
-
-public:
     void parse(string row);//parses a set of comma seperated strings used for extracting book data
     void add(string bID,
         string bTitle,
@@ -19,7 +17,7 @@ public:
     void printAll();
     void printByBookType(BookType bt);
     void printInvalidIDs();
-    void printAveragePrices();
+    void printAveragePrices(string bookID);
     void removeBookByID(string bookID);
     ~Repo();
 
